@@ -13,17 +13,17 @@ input = open('lrc_mnist.pkl', 'rb')
 model = pkl.load(input)
 
 st.header('Upload HandWritten Degit Image')
-upload_file = st.file_uploader('Choose an image', type=['png', 'jpg', 'jpeg'])
+uploaded_file = st.file_uploader('Choose an image', type=(['png', 'jpg', 'jpeg']))
 
-if upload_file is not None:
-  image = Image.open(upload_file)
+if uploaded_file is not None:
+  image = Image.open(uploaded_file)
   st.image(image, caption='Test image')
   
   if st.button('Predict'):
     image = image.resize((8*8,1)
     #vector = np.array(image.convert('L')).reshape(1, -1)
     feature_vector = np.array(image)
-    lable = str((model.predict(model.predict(feature_vector))[0])
+    label = str((model.predict(feature_vector))[0])
 
     st.header('Result')
     st.text([label])
