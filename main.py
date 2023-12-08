@@ -9,8 +9,8 @@ st.title('HandWritten Degit Recognition')
 #image = Image.open('vi-names.png')
 #st.image(image)
 
-input_md = open('lrc_mnist.pkl', 'rb')
-model = pkl.load(input_md)
+input = open('lrc_mnist.pkl', 'rb')
+model = pkl.load(input)
 
 st.header('Upload HandWritten Degit Image')
 upload_file = st.file_uploader('Choose an image', type=['png', 'jpg', 'jpeg'])
