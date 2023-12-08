@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 class_list = {'0': 'FeMale', '1': 'Male'}
-st.title('Sentiment analysis from Vietnamese names')
+st.title('HandWritten Degit Recognition')
 
 #image = Image.open('vi-names.png')
 #st.image(image)
@@ -12,7 +12,7 @@ st.title('Sentiment analysis from Vietnamese names')
 input_md = open('lrc_mnist.pkl', 'rb')
 model = pkl.load(input_md)
 
-st.header('Write a (full) name')
+st.header('Upload HandWritten Degit Image')
 txt = st.text_area('', '')
 
 if txt != '':
