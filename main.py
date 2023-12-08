@@ -6,13 +6,10 @@ import numpy as np
 class_list = {'0': 'FeMale', '1': 'Male'}
 st.title('Sentiment analysis from Vietnamese names')
 
-image = Image.open('vi-names.png')
-st.image(image)
+#image = Image.open('vi-names.png')
+#st.image(image)
 
-input_ec = open('ec_vinames.pkl', 'rb')
-encoder = pkl.load(input_ec)
-
-input_md = open('lrc_vinames.pkl', 'rb')
+input_md = open('lrc_mnist.pkl', 'rb')
 model = pkl.load(input_md)
 
 st.header('Write a (full) name')
