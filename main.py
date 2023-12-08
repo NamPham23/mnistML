@@ -1,4 +1,4 @@
-import streamlit as st 
+reimport streamlit as st 
 import pickle as pkl
 from PIL import Image
 import numpy as np
@@ -22,9 +22,9 @@ if upload_file is not None:
   if st.button('Predict'):
     image = image.resize((8*8,1)
     #vector = np.array(image.convert('L')).reshape(1, -1)
-    vector = np.array(image)
-    lable = str(model.predict(model.predict(vector))[0])
+    feature_vector = np.array(image)
+    lable = str((model.predict(model.predict(feature_vector))[0])
 
     st.header('Result')
-    st.text(class_list[label])
+    st.text([label])
     
